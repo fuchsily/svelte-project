@@ -1,18 +1,18 @@
-<script>
-	export let name;
+<script lang="ts">
+	import TaskForm from "./components/task-form.svelte";
+	let name = "Task App";
 </script>
 
 <main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
+	<h1>{name}!</h1>
+	<TaskForm/>
 </main>
 
 <style>
 	main {
 		text-align: center;
-		padding: 1em;
-		max-width: 240px;
-		margin: 0 auto;
+		margin: 1em auto;
+		max-width: 800px;
 	}
 
 	h1 {
@@ -20,11 +20,5 @@
 		text-transform: uppercase;
 		font-size: 4em;
 		font-weight: 100;
-	}
-
-	@media (min-width: 640px) {
-		main {
-			max-width: none;
-		}
 	}
 </style>
